@@ -70,6 +70,7 @@ class TicTacToe
 
   def won?
     WIN_COMBINATIONS.any? do |combo|
+<<<<<<< HEAD
 
     if @board[combo[0]] == "X" && @board[combo[1]] == "X" && @board[combo[2]] == "X"
       return combo
@@ -114,7 +115,20 @@ def play
   end
 
 end
+=======
+>>>>>>> afa5f36e6a1a9d04f6426bf361655edd5e83f064
 
+    if @board[combo[0]] == "X" && @board[combo[1]] == "X" && @board[combo[2]] == "X"
+      return combo
+    elsif @board[combo[0]] == "O" && @board[combo[1]] == "O" && @board[combo[2]] == "O"
+      return combo
 
+    end
+  end
+end
 
+  def full?
+    @board.all? {|token| token == "X" && token == "O"}
+    full?
+  end
 end
